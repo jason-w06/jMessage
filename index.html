@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>Messenger App</h1>
+		<div id="messages"></div>
+		<input id="textMsg">
+		<button id="enter">Enter</button>
+		<script>
+			function sendMessage() {
+				//const socket = new WebSocket("")
+				const messageList = document.getElementById("messages");
+				const messageText = document.getElementById("textMsg").value;
+				
+				const newMessage = document.createElement("p");
+				
+				newMessage.textContent = messageText;
+				
+				messageList.appendChild(newMessage);
+			}
+			
+			document.getElementById("enter").addEventListener("click", sendMessage);
+		</script>
+	</body>
+</html>
